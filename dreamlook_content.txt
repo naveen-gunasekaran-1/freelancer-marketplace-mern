@@ -1,0 +1,1291 @@
+WEBSITE FOR DREAM LOOK
+PROJECT WORK I
+Submitted by
+
+NIMESH S V
+21CSR128
+
+
+PONSUDHAN V
+21CSR138
+
+PRATEEKSHA V
+21CSR144
+in partial fulfilment of the requirements for the award of the degree
+of
+
+BACHELOR OF ENGINEERING
+IN
+COMPUTER SCIENCE AND ENGINEERING
+DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING
+
+KONGU ENGINEERING COLLEGE
+(Autonomous)
+PERUNDURAI ERODE – 638 060
+
+
+MAY 2024
+
+
+DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING KONGU ENGINEERING COLLEGE
+(Autonomous) PERUNDURAI ERODE – 638 060
+MAY 2024
+
+
+BONAFIDE CERTIFICATE
+
+
+
+
+This is to certify that the Project report entitled WEBSITE FOR DREAM LOOK is the bonafide record of the project work done by NIMESH S V (Register No: 21CSR128), PONSUDHAN  V  (Register  No:  21CSR138),  PRATEEKSHA  V  (Register
+No:21CSR144), in the partial fulfillment of the requirements for the award of the Degree of Bachelor of Engineering in Computer Science and Engineering of Anna University Chennai during the year 2023-2024.
+
+
+
+
+
+
+
+
+
+SUPERVISOR	HEAD OF THE DEPARTMENT
+Date:	(Signature with seal)
+
+ABSTRACT
+
+
+
+
+The project "Dream Look" entails the development of an online clothing store website using modern technologies such as ReactJS, MongoDB Atlas, Cloudinary, Stripe, and Node.js. The objective is to transition an existing offline clothing store to an online platform, thereby expanding its customer reach and increasing profitability. The website will offer an extensive collection of clothing items, providing customers with a convenient and seamless shopping experience. By leveraging ReactJS for the frontend, MongoDB Atlas for database management, Cloudinary for image storage and management, Stripe for secure payment processing, and Node.js for backend development, the project aims to deliver a robust and scalable e-commerce solution. Through effective implementation of these technologies, "Dream Look" endeavors to enhance user engagement, optimize sales, and establish a prominent online presence in the competitive retail market.
+By harnessing the capabilities of these modern technologies, "Dream Look" aims to create a robust and scalable e-commerce platform that maximizes user engagement, optimizes sales, and establishes a prominent online presence. Through effective implementation and continuous improvement, the project seeks to achieve its goal of transitioning the offline clothing store into a successful online venture, poised for long-term growth and profitability in the dynamic retail landscape.
+
+
+
+KONGU ENGINEERING COLLEGE
+(Autonomous)
+
+PERUNDURAI ERODE – 638 060
+MAY 2024
+
+
+DECLARATION
+
+
+We affirm that the Project Report titled WEBSITE FOR DREAM LOOK being submitted in partial fulfillment of the requirements for the award of Bachelor of Engineering is the original work carried out by us. It has not formed the part of any other project report or dissertation on the basis of which a degree or award was conferred on an earlier occasion this or any other candidate.
+Date:	NIMESH S V
+(21CSR128)
+
+PONSUDHAN V
+(21CSR138)
+
+PRATEEKSHA V
+(21CSR144)
+
+
+I certify that the declaration made by the above candidate is true to the best of my knowledge.
+
+
+
+
+
+Date:	Name and Signature of the Supervisor
+
+
+
+
+ACKNOWLEDGEMENT
+
+We express our sincere thanks and gratitude to Thiru. A. K. ILANGO B.Com., M.B.A., LLB., our beloved Correspondent, and all other philanthropic trust members of Kongu Vellalar Institute of Technology Trust who have always encouraged us in academic and co-curricular activities.
+
+
+We are extremely thankful with no words of a formal nature to the dynamic Principal Dr. V. BALUSAMY, M.Tech., Ph.D., for providing the necessary facilities to complete our work.
+
+
+We would like to express our sincere gratitude to our respected Head of the Department Dr. S. MALLIGA, M.E., Ph.D., for providing the necessary facilities.
+
+
+We extend our thanks to Mr. M. MUTHURAJA, M.E., Assistant Professor, Computer Science Engineering, Project Coordinator for his encouragement and valuable advice that made us carry out the project work successfully.
+
+
+We extend our gratitude to our Supervisor Mr. M. MUTHURAJA, M.E., Assistant Professor of Computer Science Engineering, for his valuable ideas and suggestions, which have been very helpful in the project. We are grateful to all the faculty members of the Computer Science and Engineering Department, for their support.
+
+
+
+
+TABLE OF CONTENTS
+
+CHAPTER No.
+TITLE
+PAGE No.
+
+ABSTRACT
+iii
+
+LIST OF FIGURES
+viii
+
+1.
+
+INTRODUCTION
+
+1
+
+1.1 EXISTING SYSTEM
+1
+
+1.2 SYSTEM STUDY
+2
+
+1.3 OBJECTIVE
+2
+
+1.4 SCOPE
+3
+2.
+GENERAL DESCRIPTION
+4
+
+2.1 PROJECT PERSPECTIVE
+4
+
+2.2 USER CHARACTERISTICS
+4
+
+2.3 DESIGN AND IMPLEMENTATION
+
+
+CONSTRAINTS
+
+
+3.
+
+REQUIREMENTS
+
+6
+
+3.1 FUNCTIONAL REQUIREMENTS
+6
+
+3.2 NON-FUNCTIONAL REQIREMENTS
+7
+
+3.3 USER INTERFACES
+8
+4.
+DETAILED DESIGN
+14
+
+4.1 ARCHITECTURAL DESIGN
+14
+
+4.1.1 MODULE CHARACTERISTICS
+14
+
+4.1.1.1 USER MODULE
+14
+
+4.1.1.2 ADMIN MODULE
+14
+
+
+
+4.1.1.2 USE CASE DIAGRAM
+15
+
+4.1.1.3 SEQUENCE DIAGRAM
+16
+
+4.2 INTERFACE DESIGN
+17
+
+4.3 DATABSE DESIGN
+18
+
+4.4 OUTPUT DESIGN
+18
+5.
+TESTING
+
+19
+
+5.1 UNIT TESTING
+19
+
+5.2 REGRESSION TESTING
+19
+
+5.3 VALIDATION TESTING
+19
+
+5.4 VERIFICATION TESTING
+20
+
+5.5 INTEGRATION TESTING
+20
+6.
+CONCLUSION AND FUTURE SCOPE
+
+21
+
+APPENDIX 1
+22
+
+APPENDIX 2
+50
+
+REFERENCES
+57
+
+
+LIST OF FIGURES
+
+
+
+
+FIGURE NO.
+TITLE
+PAGE NO.
+4.1
+FLOW DIAGRAM
+15
+4.2
+USE CASE DIAGRAM
+16
+4.3
+SEQUENCE DIAGRAM
+17
+4.4
+DATABASE DESIGN DIAGRAM
+18
+
+CHAPTER 1 INTRODUCTION
+
+Discover "Dream Look," where fashion meets imagination, unlocking endless style possibilities. Dive into a realm where trends intertwine with dreams, creating a fusion of creativity and elegance. Explore our curated collections that redefine fashion standards and inspire individual expression. Embark on a journey through a virtual runway of sophistication and innovation. Experience the allure of avant-garde designs that ignite passion and captivate senses. Immerse yourself in a world where every garment tells a story of glamour and allure. Unleash your inner fashionista and indulge in the luxury of self- expression with "Dream Look." Elevate your wardrobe with pieces that exude confidence and charm, setting you apart with effortless grace. Join a community of trendsetters and tastemakers who share a vision for fashion-forward living. Step into "Dream Look" and transform your style fantasies into reality.
+
+
+	•	EXISTING SYSTEM
+From the requirement analysis it is clear that there is no existing system currently in place for Dream Look to manage the items. The company is currently relying on a manual book to keep track of their items, which can be inefficient and prone to errors. The new database management website will provide a digital platform to streamline the product management process, improve efficiency, and reduce the likelihood of errors. By implementing this new system, Dream Look can better manage their products and improve the overall effectiveness of their business operations.
+
+	•	SYSTEM STUDY
+	•	Understanding the Business Requirements
+
+The first step in the system study is to understand the business requirements of the project. This involves identifying the business objectives, target audience, and the features and functionalities required in the website.
+
+	•	Analyzing the Existing Systems and Processes
+
+The next step is to analyze the existing systems and processes in place, including the current website and any related software systems. This will help identify any limitations or areas for improvement in the new website.
+
+
+	•	Identifying User Needs
+
+The system study should also involve identifying the needs of the users who will be accessing the website. This can be done through surveys, focus groups, or other user research methods.
+
+	•	Developing Use Cases
+
+Use cases can be developed to illustrate how the website will function and how users will interact with it. This can help identify any potential issues or areas for improvement in the design and functionality.
+
+
+	•	OBJECTIVE
+The objective of DREAM LOOK is to establish a robust online presence, extending its expertise in men's fashion to a global audience. Through a dedicated website, the company aims to showcase its diverse range of clothing items, including suits, shirts, pants, jackets, T-shirts, and trousers. By leveraging e-commerce capabilities, the website will enable customers from various locations to explore the collection, place orders conveniently, and enjoy a seamless shopping experience. Additionally, the website will serve as a platform for effective communication with clients, fostering engagement and building lasting
+
+relationships. DREAM LOOK strives to become a go-to destination for men seeking stylish and high-quality fashion essentials, catering to their needs with expertise and excellence.
+
+	•	SCOPE
+
+The scope of Dream Look's men's fashion store encompasses a comprehensive range of apparel, accessories, and grooming essentials tailored to meet the diverse needs and preferences of modern men. From timeless classics to avant-garde trends, the store offers a curated selection of high-quality garments crafted from premium materials, ensuring both style and durability. It caters to various lifestyles and occasions, including casual wear, formal attire, athleisure, and special events, providing options for every aspect of a man's wardrobe. In addition to clothing, the store features a wide array of accessories such as shoes, belts, hats, and bags, as well as grooming products and skincare essentials to complete the look. Dream Look prioritizes inclusivity and diversity, offering sizes, styles, and designs that cater to men of all body types, ages, and cultural backgrounds. With a focus on sustainability and ethical practices, the store sources from eco-friendly brands and promotes conscious consumption. Through its online platform, Dream Look extends its reach globally, allowing customers to access its curated offerings from anywhere, at any time. Moreover, the store provides personalized styling services and fashion advice to help customers discover their signature style and express themselves with confidence. By staying abreast of emerging trends and consumer preferences, Dream Look continually updates its inventory and enhances its shopping experience to remain a leader in men's fashion.
+
+CHAPTER 2 GENERAL DESCRIPTION
+
+
+	•	PROJECT PERSPECTIVE
+	•	The increasing preference for online shopping among consumers necessitates the establishment of a digital presence to remain competitive and relevant in the retail industry.
+	•	Embracing e-commerce, "Dream Look" can overcome geographical limitations and tap into new markets, thereby expanding its customer base and revenue potential.
+	•	An online store offers unparalleled convenience to customers, allowing them to browse, select, and purchase products from the comfort of their homes or on the go, 24/7.
+
+
+	•	USER CHARACTERISTICS
+For "Dream Look," understanding user and admin characteristics is pivotal for tailoring the platform to their distinct needs. Users, comprising potential shoppers, possess diverse preferences and expectations, seeking an intuitive interface, easy navigation, and a wide array of clothing options. They value seamless browsing, quick access to product details, and secure payment options, emphasizing the importance of a visually appealing and user-friendly platform. Furthermore, users appreciate personalized recommendations and responsive customer support, fostering loyalty and repeat purchases. On the other hand, administrators, tasked with managing the platform, prioritize efficient inventory management, streamlined order processing, and robust security measures. They require comprehensive dashboards, analytics tools, and inventory tracking systems to monitor sales, manage stock levels, and analyze customer behavior. Additionally, administrators seek flexible content management capabilities, enabling them to update product listings, promotions, and other site content swiftly. Both user and admin characteristics serve as guiding principles in crafting a seamless and satisfying online shopping experience within the "Dream Look" platform.
+
+	•	DESIGN AND IMPLEMENTATION CONSTRAINTS
+	•	Time
+
+The project must adhere to strict timelines for design, development, testing, and deployment to ensure timely launch of the online clothing store. Any delays in project milestones could impact the overall success and competitiveness of Dream Look in the market.
+	•	Budget Limitations
+
+There may be budget constraints that limit the resources available for development, procurement of technology, and marketing initiatives. This could affect the selection of features, technologies, and third-party services integrated into the platform.
+	•	Security
+
+The online store must comply with industry standards and regulations for data security, privacy, and online payments (such as PCI DSS compliance). Implementation constraints may arise if there are specific security requirements or compliance mandates that must be met.
+	•	Scalability
+
+The architecture and design of the online store must be scalable to accommodate future growth in user traffic, product catalog size, and concurrent transactions. Scalability constraints could arise if the system architecture is not designed to handle increased load.
+
+
+CHAPTER 3 REQUIREMENTS
+
+	•	FUNCTIONAL REQUIREMENTS
+
+	•	User Authentication
+
+Users should be able to register, log in, and log out securely to access their accounts and perform actions such as browsing products, adding items to the cart, and making purchases.
+	•	Product Catalog
+
+The website should display a comprehensive catalog of clothing items, including categories, product details, prices, and availability. Users should be able to search, filter, and sort products based on various criteria.
+	•	Shopping Cart
+
+Users should be able to add items to their shopping cart, view the cart contents, update quantities, and proceed to checkout seamlessly. The cart should retain items even if the user navigates away from the page.
+	•	Checkout Process
+
+The checkout process should be intuitive and streamlined, allowing users to enter shipping and payment information, apply discounts or promo codes, and confirm their orders securely.
+	•	Payment Processing
+
+The website should integrate with Stripe or another secure payment gateway to process payments efficiently and securely. Users should have multiple payment options available, including credit/debit cards, PayPal, and other digital wallets.
+
+	•	NON-FUNCTIONAL REQUIREMENTS
+
+	•	Performance
+
+The website should load quickly and respond promptly to user interactions, even during periods of high traffic. Page load times should be optimized to enhance the user experience and minimize bounce rates.
+	•	Usability
+
+The website should be intuitive and user-friendly, with clear navigation, informative product descriptions, and visually appealing design elements. User interfaces should be designed with usability principles in mind to minimize confusion and optimize task completion.
+	•	Reliability
+
+The website should be reliable and stable, with robust error handling and recovery mechanisms in place to prevent data loss or corruption in the event of system failures or unexpected errors.
+	•	Availability
+
+The website should have high availability, with minimal downtime for maintenance. Redundant systems, failover mechanisms, and automated backups for uninterrupted service.
+
+	•	USER INTERFACES
+
+HOME PAGE:
+
+The home page links to various pages like products,login,contact.
+
+
+
+
+
+FIGURE 3.3.0
+
+CATEGORIES PAGE:
+
+The categories page contains the categories of products that available in Dream Look
+
+
+
+
+FIGURE 3.3.1
+
+PRODUCTS PAGE:
+
+The products page contains the products that are available in Dream Look.
+
+
+
+FIGURE 3.3.2
+
+ABOUT US PAGE:
+
+The About Us contains the mission,vision and history of the Shop.
+
+
+FIGURE 3.3.3
+
+
+CONTACT US PAGE:
+
+The contact us page helps to approach the company using given details.
+
+
+
+FIGURE 3.3.4
+
+FOOTER PAGE:
+
+The footer page contains the details like address and the social media links of the company.
+
+
+FIGURE 3.3.5
+
+
+PROFILE PAGE:
+The profile page show the information of the registered and logged-in user.
+
+
+
+FIGURE 3.3.6
+
+PRODUCT DISPLAY PAGE:
+The product display page shows the product with description.
+
+
+
+
+FIGURE 3.3.7
+
+
+WISHLIST TAB:
+In wishlist tab,we can view the product that user added the products in
+wishlist.
+
+
+FIGURE 3.3.8
+
+ADD TO CART TAB:
+The add to cart tab will display the product that user added the product to his/her cart.
+
+
+
+FIGURE 3.3.9
+
+
+ONLINE ORDERING PAGE:
+The online ordering page where user checkout the products and order the products in the cart.
+
+FIGURE 3.3.10
+
+
+
+
+CHAPTER 4 DETAILED DESIGN
+
+	•	ARCHITECTURAL DESIGN
+
+The architectural design includes various diagrams such as use case diagram, sequence diagram and activity diagram for both user and admin modules.
+
+	•	MODULE CHARACTERISTICS
+
+The project contains two modules as follows and their description is given
+below.
+	•	User module
+	•	Admin module
+
+
+	•	User Module
+
+The user module contains a home page, projects page, about us page and contact us page. The user can view all the pages as mentioned in the user module flow FIGURE 4.1
+
+
+
+
+
+
+FIGURE 4.1 FLOWCHART
+
+
+	•	USE CASE DIAGRAM
+
+A use case diagram is a dynamic or behaviour diagram in UML. Use case diagrams model the functionality of a system using actors and use cases. Use cases are set of actions, services, and functions that the system needs to perform. A use case diagram at its simplest is a representation of a user's interaction with the system that shows the relationship between the user and the different use cases in which the user is involved. The use cases are represented by either circles or ellipses. Due to their simplistic nature, use case diagrams can be a good communication tool for stakeholders. FIGURE 4.2
+
+
+
+
+FIGURE 4.2 USE CASE DIAGRAM
+
+	•	SEQUENCE DIAGRAM
+
+Sequence chart diagram is one of the five UML diagrams used to model the dynamic nature of a system. The admin defines the sequence of an object during its lifetime. FIGURE 4.3
+
+
+
+
+FIGURE 4.3 SEQUENCE DIAGRAM
+
+
+
+	•	INTERFACE DESIGN
+
+The application provides various interfaces to the users that make them more convenient with the application. The user interface contains Home, About, Projects done by the company. Further the user can contact the company by giving their details, and approach the company. This is simple to use and clear to understand. The user can further provide feedback regarding the company. The user interface is more attractive and consistent on all interface screens. The interface is completely responsive.
+
+
+	•	DATABASE DESIGN
+
+The Database used in this system is MongoDB. In Mongo, the data is stored in the form of collections and documents. There are several collections like services to store, update, delete, retrieve as well as delete the projects done by the company, services to add or remove a admin and to store the Feedback that their customer provides. Customer details like name, email id, phone number of those who contacted through mail are stored in the MongoDB. FIGURE 4.4
+
+
+FIGURE 4.4
+
+	•	OUTPUT DESIGN
+
+Output design generally refers to the results and information that are generated by the system for many end-users; it should be understandable with the enhanced format. Previewing the output reports by the user is extremely important because the user is the ultimate judge of the quality of the output and, in turn, the success of the system. The output is designed in such a way that it is attractive, convenient and informative.
+
+CHAPTER 5 TESTING
+
+	•	UNIT TESTING
+
+Unit testing is a software development process in which the smallest testable parts of an application, called units, are individually and independently scrutinized for proper operation. Unit testing can be done manually, but is often automated. In this process, each module is considered as individual units and are tested for proper operation. If each module meets up with the user’s requirement, then it is subjected to integration testing where more than one module is integrated and tested.
+
+	•	REGRESSION TESTING
+
+Regression testing helps in identifying any unintended side effects or issues that may arise due to code changes, updates to dependencies, or modifications in the underlying infrastructure. By rerunning test cases, the development team can ensure that previously implemented features and functionality have not been negatively impacted by recent updates.The primary objective of regression testing is to ensure that the website remains fully functional, reliable, and user-friendly, even after modifications or enhancements have been made.Overall, regression testing serves as an essential quality assurance measure to maintain the integrity and performance of the website throughout its lifecycle. It helps in minimizing the risk of functional regressions, ensuring that the website continues to meet the expectations and requirements of the end users and stakeholders.
+
+	•	VALIDATION TESTING
+
+The process of evaluating software during the development process or at the end of the development process to determine whether it satisfies specified business requirements. Validation Testing ensures that the service actually meets the client's needs. It can also be defined as to demonstrate that the service fulfils its intended use when deployed on appropriate environment.
+
+
+	•	VERIFICATION TESTING
+
+Verification is the process of evaluating work-service of a development phase to determine whether they meet the specified requirements. When developing each module, the individuality of the service is checked at its development stage. Thus ,the modules must be verified at the development stage.
+
+	•	INTEGRATION TESTING
+
+Integration tests are designed to test the integrated software components to determine if they actually run as a program. It is specifically aimed at exposing problems that arise from the combination of components. Integration testing is done after integration of the model with the core service. The integration testing can be done for our project by integrating the user module.
+
+CHAPTER 6 CONCLUSION AND FUTURE WORK
+
+The development of the "Dream Look" online clothing store signifies a pivotal move towards adapting to the evolving retail landscape. Leveraging cutting-edge technologies such as ReactJS, MongoDB Atlas, Cloudinary, Stripe, and Node.js, the project aims to enhance customer reach, drive sales, and establish a prominent online presence. The seamless user experience, secure payment processing, and comprehensive product catalog promise unparalleled convenience and satisfaction to shoppers. Moving forward, continuous refinement and adaptation will be crucial to staying ahead in the competitive market. Future initiatives include enhancing personalization through advanced algorithms, integrating augmented reality for virtual try-on experiences, promoting sustainability initiatives, and expanding social commerce integration. Moreover, efforts towards international expansion, voice commerce, advanced analytics, community engagement, and loyalty programs will be pursued to maintain a competitive edge and drive sustained growth in the dynamic digital landscape.
+
+APPENDIX 1
+CODING:
+App.js:
+import React, { useEffect, useState } from "react"; import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom"; import Feedback from "./pages/Feedback.jsx";
+import ProtectedRoute from "./routes/ProtectedRoute"; useEffect(() => {
+Store.dispatch(loadUser()); Store.dispatch(loadSeller()); Store.dispatch(getAllProducts()); Store.dispatch(getAllEvents()); getStripeApikey();
+}, []);
+return (
+<BrowserRouter>
+{stripeApikey && (
+<Elements stripe={loadStripe(stripeApikey)}>
+<Routes>
+<Route path="/payment" element={
+<ProtectedRoute>
+<PaymentPage />
+</ProtectedRoute>
+}
+/>
+
+</Routes>
+</Elements>
+)}
+<Routes>
+<Route path="/" element={<HomePage />} />
+<Route path="/login" element={<LoginPage />} />
+<Route path="/sign-up" element={<SignupPage />} />
+<Route path="/activation/:activation_token" element={<ActivationPage />}
+/>
+<Route path="/seller/activation/:activation_token" element={<SellerActivationPage />}
+/>
+<Route path="/products" element={<ProductsPage />} />
+<Route path="/product/:id" element={<ProductDetailsPage />} />
+<Route path="/checkout" element={
+<ProtectedRoute>
+<CheckoutPage />
+</ProtectedRoute>
+}
+/>
+<Route path="/shop/preview/:id" element={<ShopPreviewPage />} />
+{/* shop Routes */}
+<Route path="/shop-create" element={<ShopCreatePage />} />
+
+<Route path="/admin" element={<ShopLoginPage />} />
+
+
+export default App;;
+
+
+Header:
+import React, { useState } from "react"; import { Link } from "react-router-dom"; import styles from "../../styles/styles";
+import { categoriesData, productData } from "../../static/data"; import {
+AiOutlineHeart, AiOutlineSearch, AiOutlineShoppingCart,
+} from "react-icons/ai";
+import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io"; import { BiMenuAltLeft } from "react-icons/bi";
+import { CgProfile } from "react-icons/cg"; import DropDown from "./DropDown"; import Navbar from "./Navbar";
+import { useSelector } from "react-redux"; import Cart from "../cart/Cart";
+import Wishlist from "../Wishlist/Wishlist"; import { RxCross1 } from "react-icons/rx";
+
+return (
+<>
+<div className={`${styles.section}`}>
+
+<div className="hidden 1000px:h-[40px] 800px:my-[20px] 800px:flex items-center justify-between">
+<div>
+</div>
+</div>
+</div>
+<div className={`${
+active === true ? "shadow-sm fixed top-0 left-0 z-30" : null
+} transition hidden 800px:flex items-center justify-between w-full bg-[#023e8a] h- [70px]`}
+>
+</div>
+
+
+export default Header;
+
+
+Navbar:
+import React from "react";
+import { Link } from "react-router-dom"; import { navItems } from "../../static/data"; import styles from "../../styles/styles";
+
+const Navbar = ({ active }) => { return (
+<div className={`block 800px:${styles.noramlFlex}`}>
+{navItems && navItems.map((i, index) => (
+<div className="flex">
+<Link
+
+to={i.url} className={`${ active === index + 1
+? "text-[#fff]"
+: "text-black 800px:text-[#fff]"
+} pb-[30px] 800px:pb-0 font-[500] px-6 cursor-pointer}`}
+>
+{i.title}
+</Link>
+</div>
+))}
+</div>
+);
+};
+
+
+export default Navbar;
+
+
+Footer:
+import React from "react";
+import { useHistory } from "react-router-dom"; import {
+AiFillFacebook, AiFillInstagram, AiFillYoutube, AiOutlineTwitter,
+} from "react-icons/ai";
+import { Link } from "react-router-dom"; import {
+
+footercompanyLinks, footerProductLinks, footerSupportLinks,
+} from "../../static/data";
+
+
+const Footer = () => { return (
+<ul className="text-center sm:text-start">
+<h1 className="mb-1 font-semibold">Shop</h1>
+{footercompanyLinks.map((link, index) => (
+<li key={index}>
+<Link
+className="text-gray-400 hover:text-teal-400 duration-300 text-sm cursor-pointer leading-6"
+to={link.link}
+>
+{link.name}
+</Link>
+</li>
+))}
+</ul>
+</div>
+<div
+className="grid grid-cols-1 sm:grid-cols-2 gap-20 text-center pt-2 text-gray-400 text-sm pb-8"
+>
+<span>© 2024 . DreamLook . All rights reserved.</span>
+<span>Terms · Privacy Policy</span>
+
+</div>
+</div>
+);
+};
+
+
+export default Footer;
+
+
+Contact:
+import React, { useState } from "react";
+import Footer from "../components/Layout/Footer"; import Header from "../components/Layout/Header"; import styles from "../styles/styles";
+import { Link } from "react-router-dom";
+
+
+const ContactPage = () => { return (
+<div>
+<Header />
+<Contact />
+<Footer />
+</div>
+);
+};
+
+
+const Contact = () => {
+const [activeTab, setActiveTab] = useState(0);
+
+
+const toggleTab = (tab) => {
+
+if (activeTab === tab) { setActiveTab(0);
+} else { setActiveTab(tab);
+}
+};
+
+
+return (
+<div class="mt-0 px-4">
+<h1 class="text-2xl font-bold mb-4 ml-20">Phone Number : </h1>
+<p class="mb-4 ml-24">+91 99650-88654</p>
+<br />
+<h1 class="text-2xl font-bold mb-4 ml-20">Email -ID : </h1>
+<p class="mb-4 ml-24">kumardreamlook1@gmail.com</p>
+<br />
+<h1 class="text-2xl font-bold mb-4 ml-20">Address : </h1>
+<p class="mb-4 ml-24">
+204,Uzhavu Vanika Valagam,Anna Nagar,Arachalur,Erode - 638101
+</p>
+<br />
+<br />
+<br />
+</div>
+);
+};
+
+
+export default ContactPage;
+
+Database:
+const mongoose = require("mongoose"); const connectDatabase = () => { mongoose
+.connect(process.env.DB_URL, { useNewUrlParser: true, useUnifiedTopology: true,
+})
+.then((data) => {
+console.log(`mongod connected with server: ${data.connection.host}`);
+});
+};
+module.exports = connectDatabase;
+
+
+
+
+AdminDashboard:
+
+
+import React, { useEffect, useState } from "react"; import styles from "../../styles/styles";
+const AdminDashboardMain = () => { const dispatch = useDispatch();
+const { adminOrders,adminOrderLoading } = useSelector((state) => state.order); const { sellers } = useSelector((state) => state.seller);
+useEffect(() => { dispatch(getAllOrdersOfAdmin()); dispatch(getAllSellers());
+}, []);
+
+const adminEarning = adminOrders && adminOrders.reduce((acc,item) => acc + item.totalPrice * .10, 0);
+
+
+
+
+const adminBalance = adminEarning?.toFixed(2); const row = [];
+return (
+<>
+{
+adminOrderLoading ? (
+<Loader />
+) :
+<h5 className="pt-2 pl-[36px] text-[22px] font-[500]">$ {adminBalance}</h5>
+</div>
+<div className="w-full mb-4 800px:w-[30%] min-h-[20vh] bg-white shadow rounded px-2 py-5">
+<div className="flex items-center">
+<MdBorderClear size={30} className="mr-2" fill="#00000085" />
+<h3
+className={`${styles.productTitle} !text-[18px] leading-5 !font-[400] text- [#00000085]`}
+>
+All Sellers
+</h3>
+</div>
+</Link>
+</div>
+
+<div className="w-full mb-4 800px:w-[30%] min-h-[20vh] bg-white shadow rounded px-2 py-5">
+<div className="flex items-center">
+<AiOutlineMoneyCollect size={30} className="mr-2" fill="#00000085"
+/>
+<h3
+className={`${styles.productTitle} !text-[18px] leading-5 !font-[400] text- [#00000085]`}
+>
+All Orders
+</h3>
+</div>
+<h5 className="pt-2 pl-[36px] text-[22px] font-[500]">{adminOrders && adminOrders.length}</h5>
+<Link to="/admin-orders">
+<h5 className="pt-4 pl-2 text-[#077f9c]">View Orders</h5>
+</Link>
+</div>
+</div>
+<br />
+
+
+export default AdminDashboardMain;
+
+
+Checkout:
+import React, { useState } from "react"; import styles from "../../styles/styles";
+
+import { Country, State } from "country-state-city"; import { useNavigate } from "react-router-dom"; import { useSelector } from "react-redux";
+import { useEffect } from "react"; import axios from "axios";
+import { server } from "../../server"; import { toast } from "react-toastify";
+
+const paymentSubmit = () => { if (
+address1 === "" || address2 === "" || zipCode === null || country === "" || city === ""
+) {
+toast.error("Please choose your delivery address!");
+} else {
+const shippingAddress = { address1,
+address2, zipCode, country, city,
+};
+const orderData = { cart,
+totalPrice,
+
+subTotalPrice, shipping, discountPrice, shippingAddress, user,
+};
+// update local storage with the updated orders array localStorage.setItem("latestOrder", JSON.stringify(orderData)); navigate("/payment");
+}
+};
+const subTotalPrice = cart.reduce(
+(acc, item) => acc + item.qty * item.discountPrice, 0
+);
+// this is shipping cost variable
+const shipping = subTotalPrice * 0.1; const handleSubmit = async (e) => { e.preventDefault();
+const name = couponCode;
+await axios.get(`${server}/coupon/get-coupon-value/${name}`).then((res) => { const shopId = res.data.couponCode?.shopId;
+const couponCodeValue = res.data.couponCode?.value; if (res.data.couponCode !== null) {
+const isCouponValid =
+cart && cart.filter((item) => item.shopId === shopId); return (
+<div className="w-full flex flex-col items-center py-8">
+
+<div className="w-[90%] 1000px:w-[70%] block 800px:flex">
+<div className="w-full 800px:w-[65%]">
+<ShippingInfo user={user} country={country} setCountry={setCountry} city={city}
+/>
+</div>
+</div>
+<div
+className={`${styles.button} w-[150px] 800px:w-[280px] mt-10`} onClick={paymentSubmit}
+>
+<h5 className="text-white">Go to Payment</h5>
+</div>
+</div>
+);
+};
+return (
+<div className="w-full 800px:w-[95%] bg-white rounded-md p-5 pb-8">
+<h5 className="text-[18px] font-[500]">Shipping Address</h5>
+<br />
+<div className="w-full flex pb-3">
+<div className="w-[50%]">
+<label className="block pb-2">Country</label>
+<select
+className="w-[95%] border h-[40px] rounded-[5px]"
+
+value={country}
+onChange={(e) => setCountry(e.target.value)}
+>
+))}
+</select>
+</div>
+<div className="w-[50%]">
+<label className="block pb-2">City</label>
+<select
+className="w-[95%] border h-[40px] rounded-[5px]" value={city}
+onChange={(e) => setCity(e.target.value)}
+>
+<option className="block pb-2" value=""> Choose your City
+</option>
+{State && State.getStatesOfCountry(country).map((item) => (
+<option key={item.isoCode} value={item.isoCode}>
+{item.name}
+</option>
+))}
+</select>
+</div>
+</div>
+
+
+<div className="w-full flex pb-3">
+<div className="w-[50%]">
+
+<label className="block pb-2">Address1</label>
+<input type="address" required value={address1}
+onChange={(e) => setAddress1(e.target.value)} className={`${styles.input} !w-[95%]`}
+/>
+</div>
+</div>
+<div></div>
+</form>
+<h5
+className="text-[18px] cursor-pointer inline-block" onClick={() => setUserInfo(!userInfo)}
+>
+Choose From saved address
+</h5>
+</div>
+);
+};
+return (
+<div className="w-full bg-[#fff] rounded-md p-5 pb-8">
+<div className="flex justify-between">
+<h3 className="text-[16px] font-[400] text-[#000000a4]">subtotal:</h3>
+<h5 className="text-[18px] font-[600]">Rs.{subTotalPrice}</h5>
+</div>
+<br />
+
+<div className="flex justify-between">
+<h3 className="text-[16px] font-[400] text-[#000000a4]">shipping:</h3>
+<h5 className="text-[18px] font-[600]">Rs.{shipping.toFixed(2)}</h5>
+</div>
+</div>
+);
+};
+
+
+export default Checkout;
+
+
+
+
+Payment:
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; import styles from "../../styles/styles";
+import { useEffect } from "react"; import {
+CardNumberElement, CardCvcElement, CardExpiryElement, useStripe, useElements,
+} from "@stripe/react-stripe-js";
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js"; import { useSelector } from "react-redux";
+import axios from "axios";
+import { server } from "../../server"; import { toast } from "react-toastify";
+
+import { RxCross1 } from "react-icons/rx";
+
+
+const Payment = () => {
+const [orderData, setOrderData] = useState([]); const [open, setOpen] = useState(false);
+const { user } = useSelector((state) => state.user); const navigate = useNavigate();
+const stripe = useStripe();
+const elements = useElements();
+
+
+useEffect(() => {
+const orderData = JSON.parse(localStorage.getItem("latestOrder")); setOrderData(orderData);
+}, []);
+const onApprove = async (data, actions) => {
+return actions.order.capture().then(function (details) { const { payer } = details;
+
+let paymentInfo = payer;
+
+
+if (paymentInfo !== undefined) { paypalPaymentHandler(paymentInfo);
+}
+});
+};
+
+
+const paypalPaymentHandler = async (paymentInfo) => { const config = {
+
+headers: {
+"Content-Type": "application/json",
+},
+};
+
+
+order.paymentInfo = {
+id: paymentInfo.payer_id, status: "succeeded",
+type: "Paypal",
+};
+};
+
+
+const paymentData = {
+amount: Math.round(orderData?.totalPrice * 100),
+};
+
+
+const paymentHandler = async (e) => { e.preventDefault();
+try {
+const config = { headers: {
+"Content-Type": "application/json",
+},
+};
+
+
+const { data } = await axios.post(
+`${server}/payment/process`, paymentData,
+
+config
+);
+const client_secret = data.client_secret; if (!stripe || !elements) return;
+const result = await stripe.confirmCardPayment(client_secret, { payment_method: {
+card: elements.getElement(CardNumberElement),
+},
+});
+if (result.error) { toast.error(result.error.message);
+} else {
+if (result.paymentIntent.status === "succeeded") { order.paymnentInfo = {
+id: result.paymentIntent.id,
+status: result.paymentIntent.status, type: "Credit Card",
+};
+const cashOnDeliveryHandler = async (e) => { e.preventDefault();
+
+const config = { headers: {
+"Content-Type": "application/json",
+},
+};
+
+
+order.paymentInfo = {
+
+type: "Cash On Delivery",
+};
+
+
+await axios
+.post(`${server}/order/create-order`, order, config)
+.then((res) => { setOpen(false); navigate("/order/success");
+toast.success("Order successful!"); localStorage.setItem("cartItems", JSON.stringify([])); localStorage.setItem("latestOrder", JSON.stringify([])); window.location.reload();
+});
+};
+return (
+<div className="w-full flex flex-col items-center py-8">
+<div className="w-[90%] 1000px:w-[70%] block 800px:flex">
+<div className="w-full 800px:w-[35%] 800px:mt-0 mt-8">
+<CartData orderData={orderData} />
+</div>
+<div className="w-full flex pb-3">
+<div className="w-[50%]">
+<label className="block pb-2">Card Number</label>
+<CardNumberElement
+className={`${styles.input} !h-[35px] !w-[95%]`}
+</div>
+<div className="w-[50%]">
+<label className="block pb-2">CVV</label>
+
+<CardCvcElement className={`${styles.input} !h-[35px]`} options={{
+style: { base: {
+fontSize: "19px", lineHeight: 1.5,
+color: "#444",
+},
+
+
+</form>
+</div>
+) : null}
+</div>
+
+
+<br />
+{/* paypal payment */}
+<div>
+<div className="flex w-full pb-5 border-b mb-2">
+<div
+className="w-[25px] h-[25px] rounded-full bg-transparent border-[3px] border- [#1d1a1ab4] relative flex items-center justify-center"
+onClick={() => setSelect(2)}
+>
+{select === 2 ? (
+<div className="w-[13px] h-[13px] bg-[#1d1a1acb] rounded-full" />
+) : null}
+</div>
+
+<h4 className="text-[18px] pl-2 font-[600] text-[#000000b1]"> Pay with Paypal
+</h4>
+</div>
+{/* pay with payement */}
+{select === 2 ? (
+<div className="w-full flex border-b">
+<div
+className={`${styles.button} !bg-[#f63b60] text-white h-[45px] rounded-[5px] cursor-pointer text-[18px] font-[600]`}
+onClick={() => setOpen(true)}
+>
+Pay Now
+</div>
+{open && (
+<PayPalScriptProvider
+options={{ "client-id":
+"Aczac4Ry9_QA1t4c7TKH9UusH3RTe6onyICPoCToHG10kjlNdI- qwobbW9JAHzaRQwFMn2-k660853jn",
+}}
+>
+<PayPalButtons
+style={{ layout: "vertical" }} onApprove={onApprove} createOrder={createOrder}
+/>
+</PayPalScriptProvider>
+</div>
+
+</div>
+)}
+</div>
+) : null}
+</div>
+
+
+<br />
+{/* cash on delivery */}
+{select === 3 ? (
+<div className="w-full flex">
+<form className="w-full" onSubmit={cashOnDeliveryHandler}>
+<input type="submit" value="Confirm"
+className={`${styles.button} !bg-[#f63b60] text-[#fff] h-[45px] rounded-[5px] cursor-pointer text-[18px] font-[600]`}
+/>
+</form>
+</div>
+) : null}
+</div>
+</div>
+);
+};
+
+
+const CartData = ({ orderData }) => {
+const shipping = orderData?.shipping?.toFixed(2); return (
+
+<div className="flex justify-between border-b pb-3">
+<h3 className="text-[16px] font-[400] text-[#000000a4]">Discount:</h3>
+<h5 className="text-[18px] font-[600]">
+{orderData?.discountPrice ? "Rs." + orderData.discountPrice : "-"}
+</h5>
+);
+};
+
+
+export default Payment;
+
+
+Route.js:
+import LoginPage from "../pages/Login"; import SignupPage from "../pages/SignupPage";
+import ActivationPage from "../pages/ActivationPage"; import HomePage from "../pages/HomePage";
+import ProductsPage from "../pages/ProductsPage"; import BestSellingPage from "../pages/BestSellingPage"; import ShopCreatePage from "../pages/ShopCreate";
+import SellerActivationPage from "../pages/SellerActivationPage"; import ShopLoginPage from "../pages/ShopLoginPage";
+import OrderDetailsPage from "../pages/OrderDetailsPage"; import TrackOrderPage from "../pages/TrackOrderPage"; import Feedback from "../pages/Feedback.jsx";
+
+export { LoginPage, SignupPage, ActivationPage,
+
+HomePage, ProductsPage, BestSellingPage, EventsPage, ContactPage, FAQPage, AboutPage,
+};
+
+
+Data.js:
+// navigation Data
+export const navItems = [
+{
+title: "Home",
+url: "/",
+},
+{
+title: "About Us", url: "/about",
+},
+{
+title: "Products", url: "/products",
+},
+{
+title: "FAQ",
+url: "/faq",
+},
+
+{
+title: "Contact Us", url: "/contact",
+},
+];
+
+
+
+
+// categories data
+{
+id: 8,
+title: "Jeans", subTitle: "", image_Url:
+"https://images.lee.com/is/image/Lee/112343021-HERO?$KDP-LARGE2$",
+},
+];
+export const footerSupportLinks = [
+{
+name: "FAQ",
+link: "/faq",
+},
+{
+name: "Contact Us", link: "/contact",
+},
+];
+
+Server.js:
+
+
+import React from "react";
+import ReactDOM from "react-dom"; import App from "./App";
+import reportWebVitals from "./reportWebVitals"; import { Provider } from "react-redux";
+import Store from "./redux/store";
+
+
+ReactDOM.render(
+<Provider store={Store}>
+<App />
+</Provider>, document.getElementById("root")
+);
+
+
+reportWebVitals();
+
+APPENDIX 2
+SNAPSHOTS
+
+
+
+
+FIGURE A2.0 HOME PAGE
+
+
+
+
+
+FIGURE A2.1 CATEGORIES PAGE
+
+
+
+
+FIGURE A2.2 PRODUCTS
+
+FIGURE A2.1 PROJECTS PAGE
+FIGURE A2.1 PROJECTS PAGE
+
+
+
+
+
+FIGURE A2.3 ABOUT PAGE
+
+
+
+FIGURE A2.4 CONTACT PAGE
+
+
+
+
+
+
+FIGURE A2.5 FOOTER PAGE
+
+
+
+
+FIGURE A2.6 PROFILE PAGE
+
+
+
+
+FIGURE A2.7 ADMIN LOGIN
+
+
+
+
+FIGURE A2.8 ADMIN DASHBOARD
+
+
+
+
+FIGURE A2.9 PRODUCT DESCRIPTION PAGE
+
+
+
+
+FIGURE A2.10 WISHLIST TAB
+
+
+
+
+
+FIGURE A2.11 ADD TO CART TAB
+
+
+
+FIGURE A2.12 ONLINE ORDER PAGE
+
+
+
+REFERENCES
+
+
+
+[1]
+Mehra, Monika, Manish Kumar, Anjali Maurya, and Charu Sharma. "MERN stack Web Development." Annals of the Romanian Society for Cell Biology 25, no. 6 (2021): 11756-11761
+[2]
+Yogesh Baiskar, Priyas Paulzagade, Krutik Koradia, Pramod Ingole, Dhiraj Shirbhate, "MERN: A Full-Stack Development", International Journal for Research in Applied Science & Engineering Technology (IJRASET) ISSN: 2321- 9653; IC Value: 45.98; SJ
+Impact Factor: 7.538 Volume 10 Issue I Jan 2022.

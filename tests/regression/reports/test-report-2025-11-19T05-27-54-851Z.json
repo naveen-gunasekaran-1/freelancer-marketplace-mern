@@ -1,0 +1,65 @@
+{
+  "timestamp": "2025-11-19T05:27:54.853Z",
+  "duration": "116.54s",
+  "summary": {
+    "total": 7,
+    "passed": 0,
+    "failed": 7,
+    "passRate": "0.0%"
+  },
+  "suites": {
+    "authentication": {
+      "passed": 0,
+      "failed": 5,
+      "tests": [
+        {
+          "name": "Signup",
+          "status": "FAILED",
+          "error": "Waiting for element to be located By(xpath, //button[contains(text(), 'Sign Up')])\nWait timed out after 10006ms"
+        },
+        {
+          "name": "Login",
+          "status": "FAILED",
+          "error": "No test user available. Run signup test first."
+        },
+        {
+          "name": "Token Persistence",
+          "status": "FAILED",
+          "error": "No token found before refresh"
+        },
+        {
+          "name": "Logout",
+          "status": "FAILED",
+          "error": "Waiting for element to be located By(xpath, //button[contains(text(), 'Logout') or contains(text(), 'Sign Out')])\nWait timed out after 10005ms"
+        },
+        {
+          "name": "Invalid Login",
+          "status": "FAILED",
+          "error": "Waiting for element to be located By(xpath, //button[contains(text(), 'Login') or contains(text(), 'Sign')])\nWait timed out after 10042ms"
+        }
+      ]
+    },
+    "jobs": {
+      "passed": 0,
+      "failed": 1,
+      "tests": [
+        {
+          "name": "Jobs Suite",
+          "status": "CRASHED",
+          "error": "ECONNREFUSED connect ECONNREFUSED 127.0.0.1:60777"
+        }
+      ]
+    },
+    "messaging": {
+      "passed": 0,
+      "failed": 1,
+      "tests": [
+        {
+          "name": "Messaging Suite",
+          "status": "CRASHED",
+          "error": "ECONNREFUSED connect ECONNREFUSED 127.0.0.1:60856"
+        }
+      ]
+    }
+  }
+}

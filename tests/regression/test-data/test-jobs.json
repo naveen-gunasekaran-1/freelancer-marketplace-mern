@@ -1,0 +1,52 @@
+{
+  "createdAt": "2025-11-19T05:41:40.215Z",
+  "userEmail": "testclient_1763530897976@example.com",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MWQ1ODkyYjVmZmUyZGQzMzBjNjM5NCIsImVtYWlsIjoidGVzdGNsaWVudF8xNzYzNTMwODk3OTc2QGV4YW1wbGUuY29tIiwidHlwZSI6ImNsaWVudCIsImlhdCI6MTc2MzUzMDg5OCwiZXhwIjoxNzY0MTM1Njk4fQ.vOJ5fURO7CQj1Y256Cg3N3f5yNru4aE1I58rW2E4yhg",
+  "jobs": [
+    {
+      "id": "691d5892b5ffe2dd330c6397",
+      "title": "Full Stack MERN Developer Needed",
+      "budget": 5000
+    },
+    {
+      "id": "691d5892b5ffe2dd330c639b",
+      "title": "Mobile App Developer - React Native",
+      "budget": 4500
+    },
+    {
+      "id": "691d5892b5ffe2dd330c639f",
+      "title": "Python Data Scientist for ML Project",
+      "budget": 6000
+    },
+    {
+      "id": "691d5892b5ffe2dd330c63a3",
+      "title": "WordPress Theme Customization",
+      "budget": 800
+    },
+    {
+      "id": "691d5893b5ffe2dd330c63a7",
+      "title": "UI/UX Designer for SaaS Dashboard",
+      "budget": 3500
+    },
+    {
+      "id": "691d5893b5ffe2dd330c63ab",
+      "title": "DevOps Engineer - AWS Infrastructure",
+      "budget": 7000
+    },
+    {
+      "id": "691d5893b5ffe2dd330c63af",
+      "title": "Content Writer - Tech Blog",
+      "budget": 1200
+    },
+    {
+      "id": "691d5893b5ffe2dd330c63b3",
+      "title": "E-commerce Website with Stripe Integration",
+      "budget": 5500
+    },
+    {
+      "id": "691d5894b5ffe2dd330c63b7",
+      "title": "Blockchain Smart Contract Developer",
+      "budget": 8000
+    }
+  ]
+}

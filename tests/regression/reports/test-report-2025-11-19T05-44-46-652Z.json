@@ -1,0 +1,90 @@
+{
+  "timestamp": "2025-11-19T05:44:46.655Z",
+  "duration": "136.44s",
+  "summary": {
+    "total": 14,
+    "passed": 10,
+    "failed": 4,
+    "passRate": "71.4%"
+  },
+  "suites": {
+    "authentication": {
+      "passed": 3,
+      "failed": 2,
+      "tests": [
+        {
+          "name": "Signup",
+          "status": "PASSED"
+        },
+        {
+          "name": "Login",
+          "status": "PASSED"
+        },
+        {
+          "name": "Token Persistence",
+          "status": "PASSED"
+        },
+        {
+          "name": "Logout",
+          "status": "FAILED",
+          "error": "Logout button not found"
+        },
+        {
+          "name": "Invalid Login",
+          "status": "FAILED",
+          "error": "Waiting for element to be located By(css selector, input[type=\"email\"], input[placeholder*=\"email\" i])\nWait timed out after 10037ms"
+        }
+      ]
+    },
+    "jobs": {
+      "passed": 2,
+      "failed": 2,
+      "tests": [
+        {
+          "name": "Create Job",
+          "status": "FAILED",
+          "error": "Waiting for element to be located By(css selector, textarea[name=\"description\"], textarea[placeholder*=\"description\" i])\nWait timed out after 10012ms"
+        },
+        {
+          "name": "Search Jobs",
+          "status": "PASSED"
+        },
+        {
+          "name": "Filter Jobs",
+          "status": "PASSED"
+        },
+        {
+          "name": "View Job Details",
+          "status": "FAILED",
+          "error": "View job details failed: No job cards found to view details"
+        }
+      ]
+    },
+    "messaging": {
+      "passed": 5,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "Navigate to Messages",
+          "status": "PASSED"
+        },
+        {
+          "name": "View Conversations",
+          "status": "PASSED"
+        },
+        {
+          "name": "Send Message",
+          "status": "PASSED"
+        },
+        {
+          "name": "Encryption Status",
+          "status": "PASSED"
+        },
+        {
+          "name": "Message History",
+          "status": "PASSED"
+        }
+      ]
+    }
+  }
+}
